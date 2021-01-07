@@ -27,13 +27,13 @@ export class WeatherCardContainer extends React.Component{
     const apiKey = "199f16089a6c8e553e0ba2ef4dbd67d3";
     //let url = "http://api.openweathermap.org/data/2.5/forecast?id=";
     //let url = "http://api.openweathermap.org/data/2.5/weather?id=";
-    let url = "http://api.openweathermap.org/data/2.5/weather?q="
+    let url = "https://api.openweathermap.org/data/2.5/weather?q="
     let units = "metric";
     const endPoint = url + cityName + '&APPID=' + apiKey + '&units=' + units;
     axios.get(endPoint)
     .then((response) => {
       console.log(response)
-      const iconUrl = "http://openweathermap.org/img/w/" + response.data.weather[0].icon + '.png';
+      const iconUrl = "https://openweathermap.org/img/w/" + response.data.weather[0].icon + '.png';
       const countryImgUrl = "https://www.countryflags.io/" + response.data.sys.country + "/flat/24.png";
       this.setState({
         notFound : false,
@@ -60,13 +60,13 @@ export class WeatherCardContainer extends React.Component{
     const apiKey = "199f16089a6c8e553e0ba2ef4dbd67d3";
     //let url = "http://api.openweathermap.org/data/2.5/forecast?id=";
     //let url = "http://api.openweathermap.org/data/2.5/weather?id=";
-    let url = "http://api.openweathermap.org/data/2.5/weather?q="
+    let url = "https://api.openweathermap.org/data/2.5/weather?q="
     let units = "metric";
     const endPoint = url + cityName + '&APPID=' + apiKey + '&units=' + units;
     console.log(endPoint);
     axios.get(endPoint)
     .then((response) => {
-        const iconUrl = "http://openweathermap.org/img/w/" + response.data.weather[0].icon + '.png';
+        const iconUrl = "https://openweathermap.org/img/w/" + response.data.weather[0].icon + '.png';
         const countryImgUrl = "https://www.countryflags.io/" + response.data.sys.country + "/flat/24.png";
         this.setState({
           notFound : false,
